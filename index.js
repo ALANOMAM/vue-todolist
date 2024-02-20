@@ -31,7 +31,7 @@ createApp({
         return {
 
           nuovoElemento: {
-             text:"alan",
+             text:" ",
              done:false
           },
     
