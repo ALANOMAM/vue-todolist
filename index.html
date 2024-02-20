@@ -26,8 +26,8 @@
 
           <!--button and input start-->
           <div class="input-group mb-3 mt-3">
-            <input type="text" class="form-control" placeholder="aggiungi nuovo elemento" aria-label="aggiungi nuovo elemento" aria-describedby="button-addon2">
-            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Aggiungi</button>
+            <input  v-model="nuovoElemento"  type="text" class="form-control" placeholder="aggiungi nuovo elemento" aria-label="aggiungi nuovo elemento" aria-describedby="button-addon2">
+            <button @click="aggiungiElemento()" class="btn btn-outline-secondary" type="button" id="button-addon2">Aggiungi</button>
           </div>
           <!--button and input end-->
          

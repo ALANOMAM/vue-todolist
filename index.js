@@ -29,13 +29,18 @@ const {createApp} = Vue;
 createApp({
     data() {
         return {
-         arrayProva:["alan","diego","francesco","davide","kemi"]
+          nuovoElemento:'', 
+
+          arrayProva:["alan","diego","francesco","davide","kemi"]
 
         }
     },
 
     methods: {
-
+     
+        aggiungiElemento(){
+            this.arrayProva.push(this.nuovoElemento)
+        }
         
     },
 
