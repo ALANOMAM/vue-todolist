@@ -30,8 +30,33 @@ createApp({
     data() {
         return {
           nuovoElemento:'', 
+           //arrayProva:["alan","diego","francesco","davide","kemi"]
+        todoArray : [
+          {
+            text:"Fare le spesa",
+            done: false
+          },
 
-          arrayProva:["alan","diego","francesco","davide","kemi"]
+          {
+            text:"Andare a nuoto",
+            done: false
+          },
+
+          {
+            text:"Studiare",
+            done: false
+          },
+
+          {
+            text:"Lavare le macchina",
+            done: false
+          },
+
+          {
+            text:"Pagare le bollette",
+            done: false
+          }
+        ]
 
         }
     },
@@ -39,7 +64,7 @@ createApp({
     methods: {
      
         aggiungiElemento(){
-            this.arrayProva.push(this.nuovoElemento)
+            //this.todoArray.push(this.nuovoElemento)
         }
         
     },
