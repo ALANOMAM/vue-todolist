@@ -19,7 +19,7 @@
    
         <!--list elements start-->
         <ul class="list-group mt-5">
-            <li v-for="todo in todoArray" class="list-group-item">{{todo.text}}</li>
+            <li v-for="todo in todoArray" class="list-group-item" :class="todo.done==true ?'done':'' ">{{todo.text}}</li>
           </ul>
        <!--list elements end-->
 

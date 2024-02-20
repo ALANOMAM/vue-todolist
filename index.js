@@ -39,7 +39,7 @@ createApp({
 
           {
             text:"Andare a nuoto",
-            done: false
+            done: true
           },
 
           {
@@ -54,7 +54,7 @@ createApp({
 
           {
             text:"Pagare le bollette",
-            done: false
+            done: true
           }
         ]
 

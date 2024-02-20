@@ -1,3 +1,7 @@
 body{
     background-color: blanchedalmond;
 }
+
+.done{
+   text-decoration: line-through; 
+}
