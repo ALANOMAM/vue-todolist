@@ -16,17 +16,21 @@
   
     <!--app inizio-->
     <div id="app" class="container">
-  
+   
+        <!--list elements start-->
         <ul class="list-group mt-5">
             <li v-for="element in arrayProva" class="list-group-item">{{element}}</li>
           </ul>
+       <!--list elements end-->
 
 
-
-
-
-
-
+          <!--button and input start-->
+          <div class="input-group mb-3 mt-3">
+            <input type="text" class="form-control" placeholder="aggiungi nuovo elemento" aria-label="aggiungi nuovo elemento" aria-describedby="button-addon2">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Aggiungi</button>
+          </div>
+          <!--button and input end-->
+         
 
 
 
