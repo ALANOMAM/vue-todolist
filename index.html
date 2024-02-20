@@ -21,7 +21,7 @@
    
         <!--list elements start-->
         <ul class="list-group mt-5">
-            <li v-for="(todo , index) in todoArray" class="list-group-item d-flex justify-content-between" :class="todo.done==true ?'done':'' ">
+            <li v-for="(todo , index) in todoArray" class="list-group-item d-flex justify-content-between" @click="invertire(index)"  :class="todo.done == true ?'done':'' " >
                 {{todo.text}}
 
                 <i @click="eliminaTodo(index)"  class="fa-solid fa-x"></i>

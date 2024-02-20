@@ -75,8 +75,22 @@ createApp({
      eliminaTodo(todoIndex){
        //console.log(todoIndex)
        this.todoArray.splice(todoIndex,1)
-     }
-        
+     },
+
+   invertire(todoIndex){ 
+    //console.log("inverto",todoIndex)
+
+    //console.log(this.todoArray[todoIndex].done)
+     //let currentState = (this.todoArray[todoIndex].done)
+     // let inverted = !(currentState)
+
+     this.todoArray[todoIndex].done = !(this.todoArray[todoIndex].done)
+   // console.log("current",this.todoArray[todoIndex].done)
+   // console.log("inverted", inverted)
+
+   // return inverted
+    
+}    
     },
 
 }).mount("#app");
