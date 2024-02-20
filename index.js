@@ -29,8 +29,11 @@ const {createApp} = Vue;
 createApp({
     data() {
         return {
-          nuovoElemento:'', 
-           //arrayProva:["alan","diego","francesco","davide","kemi"]
+          nuovoElemento: {
+             text:"",
+             done:false
+          },
+    
         todoArray : [
           {
             text:"Fare le spesa",
@@ -62,10 +65,16 @@ createApp({
     },
 
     methods: {
-     
-        aggiungiElemento(){
-            //this.todoArray.push(this.nuovoElemento)
-        }
+
+         /*aggiungiElemento(){
+            const nuovoOggeto = {...this.nuovoElemento.text}
+            this.todoArray.push(nuovoOggeto)
+        }*/
+
+     eliminaTodo(todoIndex){
+       //console.log(todoIndex)
+       this.todoArray.splice(todoIndex,1)
+     }
         
     },
 

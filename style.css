@@ -5,3 +5,7 @@ body{
 .done{
    text-decoration: line-through; 
 }
+
+.fa-x{
+    color: red;
+}
