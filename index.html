@@ -23,6 +23,7 @@
         <ul class="list-group mt-5">
             <li v-for="(todo , index) in todoArray" class="list-group-item d-flex justify-content-between" :class="todo.done==true ?'done':'' ">
                 {{todo.text}}
+
                 <i @click="eliminaTodo(index)"  class="fa-solid fa-x"></i>
             </li>
           </ul>
@@ -31,7 +32,7 @@
 
           <!--button and input start-->
           <div class="input-group mb-3 mt-3">
-            <input  v-model="nuovoElemento.text"  type="text" class="form-control" placeholder="aggiungi nuovo elemento" aria-label="aggiungi nuovo elemento" aria-describedby="button-addon2">
+            <input  v-model="nuovoElemento"  type="text" class="form-control" placeholder="aggiungi nuovo elemento" aria-label="aggiungi nuovo elemento" aria-describedby="button-addon2">
             <button @click="aggiungiElemento()" class="btn btn-outline-secondary" type="button" id="button-addon2">Aggiungi</button>
           </div>
           <!--button and input end-->

@@ -29,8 +29,9 @@ const {createApp} = Vue;
 createApp({
     data() {
         return {
+
           nuovoElemento: {
-             text:"",
+             text:"alan",
              done:false
           },
     
@@ -66,10 +67,10 @@ createApp({
 
     methods: {
 
-         /*aggiungiElemento(){
-            const nuovoOggeto = {...this.nuovoElemento.text}
-            this.todoArray.push(nuovoOggeto)
-        }*/
+         aggiungiElemento(){
+            
+            this.todoArray.push({...this.nuovoElemento})
+        },
 
      eliminaTodo(todoIndex){
        //console.log(todoIndex)
