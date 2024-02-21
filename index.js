@@ -68,8 +68,11 @@ createApp({
     methods: {
 
          aggiungiElemento(){
-            
+            //test che mi assicura che non posso pushare un array vuoto
+             if(this.nuovoElemento.text.trim() != ""){
+                //come pusho i nuovi oggetti usando anche spread operator
             this.todoArray.push({...this.nuovoElemento})
+             }
         },
 
      eliminaTodo(todoIndex){
@@ -91,6 +94,6 @@ createApp({
    // return inverted
     
 }    
-    },
+    }, 
 
 }).mount("#app");

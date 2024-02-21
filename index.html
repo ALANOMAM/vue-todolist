@@ -20,19 +20,22 @@
     <div id="app" class="container">
    
         <!--list elements start-->
-        <ul class="list-group mt-5">
-            <li v-for="(todo , index) in todoArray" class="list-group-item d-flex justify-content-between" @click="invertire(index)"  :class="todo.done == true ?'done':'' " >
-                {{todo.text}}
-
+        <ul class="list-group mt-5" v-if="todoArray.length > 0">
+            <li v-for="(todo , index) in todoArray" class="list-group-item d-flex justify-content-between"    >
+                <span :class="todo.done == true ?'done':'' "  @click="invertire(index)">{{todo.text}}</span>
                 <i @click="eliminaTodo(index)"  class="fa-solid fa-x"></i>
             </li>
           </ul>
        <!--list elements end-->
-
+     
+       <div v-else>
+        <p>HAI COMPLETATO I TASKS</p>
+       </div>
 
           <!--button and input start-->
           <div class="input-group mb-3 mt-3">
-            <input  v-model="nuovoElemento.text"  type="text" class="form-control" placeholder="aggiungi nuovo elemento" aria-label="aggiungi nuovo elemento" aria-describedby="button-addon2">
+            <!--il "@keyup.enter="aggiungiElemento()" fa che quando clicco sul tasto enter mi chiama la funzione "aggiungiElemento()" -->
+            <input  v-model="nuovoElemento.text"  @keyup.enter="aggiungiElemento()" type="text" class="form-control" placeholder="aggiungi nuovo elemento" aria-label="aggiungi nuovo elemento" aria-describedby="button-addon2">
             <button @click="aggiungiElemento()" class="btn btn-outline-secondary" type="button" id="button-addon2">Aggiungi</button>
           </div>
           <!--button and input end-->
